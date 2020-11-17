@@ -39,4 +39,5 @@ Please subscribe to the announcements group by sending an email to icdar21-mapse
 3. Create/update/delete pages under `docs/`.
 4. Run `mkdocs serve` and open up `http://127.0.0.1:8000/` in your browser to check the results.
 5. When happy with your changes, then deploy your changes with `mkdocs gh-deploy`.
+6. Do not forget to commit your changes with `git add ...`, `git commit ...` and `git push`!
 

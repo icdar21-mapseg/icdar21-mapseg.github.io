@@ -6,6 +6,7 @@ site_author: J. Chazalon; E. Carlinet; Y. Chen; J. Perret; C. Mallet; B. Duméni
 theme:
     name: readthedocs
     # collapse_navigation: true
+edit_uri: edit/main/docs/
 nav:
   - index.md
   - tasks.md
