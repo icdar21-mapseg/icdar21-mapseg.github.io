@@ -1,0 +1,22 @@
+site_name: ICDAR 2021 Competition on Historical Map Segmentation
+repo_url: https://github.com/icdar21-mapseg/icdar21-mapseg.github.io
+site_description: Official site for the ICDAR 2021 Competition on Historical Map Segmentation. Register, download the dataset and evaluation tools here.
+site_author: J. Chazalon; E. Carlinet; Y. Chen; J. Perret; C. Mallet; B. Duménieu; T. Géraud
+# google_analytics: ['UA-????????-?', 'icdar21-mapseg.github.io']
+theme:
+    name: readthedocs
+    # collapse_navigation: true
+nav:
+  - index.md
+  - tasks.md
+  - downloads.md
+  - registration.md
+  - contact.md
+  # - Introduction: 'index.md'
+  # - 'Issue Tracker': 'https://example.com/'
+markdown_extensions:
+  - markdown_katex:
+      no_inline_svg: True
+      insert_fonts_css: True
+      # macro-file: macros.tex
+strict: true
