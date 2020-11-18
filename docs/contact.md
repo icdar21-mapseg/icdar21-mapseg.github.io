@@ -4,9 +4,13 @@
 You can **contact the organizers** by sending an email to:  
 <center>`icdar21-mapseg-contact(at)googlegroups.com`</center>
 
+You can also [create an issue on our tracker](https://github.com/icdar21-mapseg/icdar21-mapseg.github.io/issues).
+
 ## Subscribe to Updates
 You can **subscribe to the announcement list** (*you can unsubscribe at any time*) by sending an email to:  
 <center>[icdar21-mapseg-announcements+subscribe@googlegroups.com](mailto:icdar21-mapseg-announcements+subscribe@googlegroups.com)</center>
+or by going to:
+<center>[https://groups.google.com/g/icdar21-mapseg-announcements](https://groups.google.com/g/icdar21-mapseg-announcements)</center>
 
 
 ## Organizers

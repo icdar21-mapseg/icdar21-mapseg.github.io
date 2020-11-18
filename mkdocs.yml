@@ -9,12 +9,17 @@ theme:
 edit_uri: edit/main/docs/
 nav:
   - index.md
-  - tasks.md
-  - downloads.md
-  - registration.md
-  - contact.md
-  # - Introduction: 'index.md'
-  # - 'Issue Tracker': 'https://example.com/'
+  - Tasks:
+    - tasks/task1.md
+    - tasks/task2.md
+    - tasks/task3.md
+  - Participate:
+    - downloads.md
+    - registration.md
+    - rules.md
+  - More information:
+    - contact.md
+    # - 'Issue Tracker (external)': 'https://github.com/icdar21-mapseg/icdar21-mapseg.github.io/issues'
 markdown_extensions:
   - markdown_katex:
       no_inline_svg: True
