@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="J. Chazalon; E. Carlinet; Y. Chen; J. Perret; C. Mallet; B. Duménieu; T. Géraud">
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Task 1: Detect Building Blocks - ICDAR 2021 Competition on Historical Map Segmentation</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../../css/theme.css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Task 1: Detect Building Blocks";
+    var mkdocs_page_input_path = "tasks/task1.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> ICDAR 2021 Competition on Historical Map Segmentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../..">Overview</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Tasks</span></p>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Task 1: Detect Building Blocks</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#input">Input</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#ground-truth-and-expected-outputs">Ground truth and Expected outputs</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#dataset">Dataset</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#file-naming-conventions">File naming conventions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#number-of-elements-per-set">Number of elements per set</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#evaluation">Evaluation</a>
+    </li>
+    </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../task2/">Task 2: Segment Map Content Area</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../task3/">Task 3: Locate Graticule Lines Intersections</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Participate</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../downloads/">Downloads</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../registration/">Registration</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../rules/">Competition Rules</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">More information</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../contact/">Contact</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">ICDAR 2021 Competition on Historical Map Segmentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Tasks &raquo;</li>
+        
+      
+    
+    <li>Task 1: Detect Building Blocks</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/icdar21-mapseg/icdar21-mapseg.github.io/edit/main/docs/tasks/task1.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"
+    integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X"
+    crossorigin="anonymous" />
+
+<style type="text/css">
+    .katex img {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: inherit;
+    }
+</style>
+<h1 id="task-1-detect-building-blocks">Task 1: Detect Building Blocks</h1>
+<p>This task consist in detecting a set of closed shapes (building blocks) in the map image.</p>
+<p>Building blocks are coarser map objects which can regroup several elements.
+Detecting these objects is a critical step in the digitization of historical maps because it provides essential components of a city.
+Each building block is symbolized by a closed which can enclose other objects and lines.
+Building blocks are surrounded by streets, rivers fortification wall or others, and are never directly connected.
+Building blocks can sometimes be reduced to a single spacial building, symbolized by diagonal hatched areas.</p>
+<p>Given the image of a complete map sheet and a mask of the map area, you need to detect each building block, as illustrated below on a excerpt of the input.
+<center>
+<img alt="Excerpt of the input for task 1" src="../../img/task1-input-detail.jpg" />
+<em>Excerpt of the input for task 1</em>
+</center></p>
+<p><center>
+<img alt="Excerpt of the expected output for task 1" src="../../img/task1-output_illustration-detail.jpg" />
+<em>Excerpt of the expected output for task 1</em>
+</center></p>
+<p>We identified the following challenges:</p>
+<ol>
+<li>Building blocks can have very variable sizes.</li>
+<li>They can be reduced to a single building (diagonal hatched area).</li>
+<li>Their contour can be damaged (ie non-closed).</li>
+<li>Several other layers of information can be overlaid on building block outlines (text, railways, underground lines, graticule lines among others).</li>
+<li>There may be decompositions inside a building block, increasing the number of edges to filter.</li>
+<li>Building blocks may be large empty areas only surrounded by a contour. The lack of texture information and the variable sizes may be challenging to multiscale texture methods like convolutional neural networks.</li>
+<li>Producing closed contours requires to embed strong guarantees in the method.</li>
+</ol>
+<h2 id="input">Input</h2>
+<p>The inputs form a set of JPEG RGB images like the one illustrated below.
+There are complete map sheet images cropped to the relevant area for which the non-relevant area is replaced by black pixels, as illustrated below.
+Those images can be large (8000x8000 pixels).</p>
+<p><center>
+<img alt="Sample input for task 1" src="../../img/task1-input-large.jpg" />
+<em>Sample input for task 1: non relevant pixels are replaced by black pixels.</em>
+</center></p>
+<p>To help participants identify the non-relevant pixels, we also provide a mask image for which non-relevant pixels have value <code>0</code> and relevant pixels have value <code>255</code>, as illustrated below. Theses masks are the expected output for task 2 (cropped to the relevant part).</p>
+<p><center>
+<img alt="Extra input mask for task 1" src="../../img/task2-output-large.jpg" />
+<em>Extra input mask for task 1 (exact same format as the output for task 2): indicates the masked content.</em>
+</center></p>
+<h2 id="ground-truth-and-expected-outputs">Ground truth and Expected outputs</h2>
+<p>Expected output for this task is a binary mask of the building blocks.
+It must be stored in PNG (lossless) format with an 8-bit single channel.
+Background must be indicated with pixel value 0, and building block areas with pixel value 255.
+We will threshold the image to discard any other value.</p>
+<p>The resulting image should look like the one below, which is the expected output for the sample input previously shown.</p>
+<p><center>
+<img alt="Sample output for task 1" src="../../img/task1-output-large.jpg" />
+<em>Sample output for task 1</em>
+</center></p>
+<p>Results need to be output in a PNG file with the exact same format and naming conventions as the ground truth, except for the <code>GT</code> part of the filename which should be changed into <code>PRED</code>:
+if the input image is named <code>train/301-INPUT.jpg</code>, then the output file must be named <code>train/301-OUTPUT-PRED.png</code>.</p>
+<h2 id="dataset">Dataset</h2>
+<p>Content for task 1 is located in the folder named <code>1-detbblocks</code> in the dataset archive.</p>
+<h3 id="file-naming-conventions">File naming conventions</h3>
+<p>Train, validation and test folder (if applicable) contain the same kind of files:</p>
+<ul>
+<li><code>${SUBSET}/${NNN}-INPUT.jpg</code>:<br />
+  JPEG RGB image containing the input image to process.
+  This image was cropped to map content and irrelevant content (masked out by the mask file described below) are set to black (RGB=<code>(0,0,0)</code>).
+  Those images can be large (10000x10000 pixels).  <blockquote>
+<p><em>example:</em><br />
+<code>1-detbblocks/train/101-INPUT.jpg</code></p>
+</blockquote>
+</li>
+<li><code>${SUBSET}/${NNN}-INPUT-MASK.png</code>:<br />
+  PNG GREY image containing a mask of the map area (same size as input).
+  While the image was cropped to the meaningful area, some elements need to be discarded (map legend for instance).
+  Map area is indicated by pixels of value <code>255</code>; only predictions within this area is to be kept.  <blockquote>
+<p><em>example:</em><br />
+<code>1-detbblocks/train/101-INPUT-MASK.png</code></p>
+</blockquote>
+</li>
+<li><code>${SUBSET}/${NNN}-OUTPUT-GT.png</code>:<br />
+  PNG GREY image containing a mask of expected building blocks (same size as input).
+  Building blocks are indicated by pixels of value <code>255</code>; all other pixels (background and irrelevant) are set to <code>0</code>.<blockquote>
+<p><em>example:</em><br />
+<code>1-detbblocks/train/101-OUTPUT-GT.png</code></p>
+</blockquote>
+</li>
+</ul>
+<h3 id="number-of-elements-per-set">Number of elements per set</h3>
+<ul>
+<li>train: 1 image</li>
+<li>validation: 1 image</li>
+<li>test: 3 images</li>
+</ul>
+<h2 id="evaluation">Evaluation</h2>
+<p><strong>Evaluation tools and illustrative notebooks provide participants with more details than the summary below.</strong>
+<em>Please <a href="../../contact/#subscribe-to-updates">subscribe to updates</a> to be notified when they are available.</em></p>
+<p>For each map sheet, we will extract the connected components from the predicted label mask.
+Based on this mask, we will compute the intersection over union (IoU) between each ground truth component and each predicted one, and retain only the matches with a value of at least <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.5</mn></mrow><annotation encoding="application/x-tex">0.5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span><span class="mord">.</span><span class="mord">5</span></span></span></span>.
+When the IoU is strictly superior to <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.5</mn></mrow><annotation encoding="application/x-tex">0.5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span><span class="mord">.</span><span class="mord">5</span></span></span></span> we have 1-to-1 matches between ground truth components and predicted ones, and this enables the computation of prediction, recall and <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>F</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">F_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> scores.</p>
+<p>We will compute the <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>F</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">F_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> values for each possible IoU threshold in <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">]</mo><mn>0.5</mn><mo separator="true">,</mo><mn>1</mn><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">]0.5, 1]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mclose">]</span><span class="mord">0</span><span class="mord">.</span><span class="mord">5</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">1</span><span class="mclose">]</span></span></span></span> and compute the area under the resulting curve.
+Such score will not only be free of any threshold, it will also be insensitive to shape area; thus weighting large and small shapes equally and provided an accurate measure of the number of objects properly detected.</p>
+<p>Finally, we will compute the average of the measures for all individual map images to produce a global indicator.</p>
+<p>The resulting measure is a float value between 0 and <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.5</mn></mrow><annotation encoding="application/x-tex">0.5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span><span class="mord">.</span><span class="mord">5</span></span></span></span>.
+A high value is better.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../task2/" class="btn btn-neutral float-right" title="Task 2: Segment Map Content Area">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../.." class="btn btn-neutral" title="Overview"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/icdar21-mapseg/icdar21-mapseg.github.io/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../.." style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../task2/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

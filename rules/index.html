@@ -9,7 +9,7 @@
   <meta name="author" content="J. Chazalon; E. Carlinet; Y. Chen; J. Perret; C. Mallet; B. Duménieu; T. Géraud">
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Tasks - ICDAR 2021 Competition on Historical Map Segmentation</title>
+  <title>Competition Rules - ICDAR 2021 Competition on Historical Map Segmentation</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
   <link rel="stylesheet" href="../css/theme.css" />
@@ -18,8 +18,8 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Tasks";
-    var mkdocs_page_input_path = "tasks.md";
+    var mkdocs_page_name = "Competition Rules";
+    var mkdocs_page_input_path = "rules.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -51,26 +51,27 @@
                     <li class="toctree-l1"><a class="reference internal" href="..">Overview</a>
                     </li>
                 </ul>
+                <p class="caption"><span class="caption-text">Tasks</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../tasks/task1/">Task 1: Detect Building Blocks</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../tasks/task2/">Task 2: Segment Map Content Area</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../tasks/task3/">Task 3: Locate Graticule Lines Intersections</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Participate</span></p>
                 <ul class="current">
-                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Tasks</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../downloads/">Downloads</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../registration/">Registration</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Competition Rules</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#task-1-detect-building-blocks">Task 1: Detect Building Blocks</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#task-2-segment-map-content-area">Task 2: Segment Map Content Area</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#task-3-locate-graticule-lines-intersections">Task 3: Locate Graticule Lines Intersections</a>
-    </li>
     </ul>
                     </li>
                 </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../downloads/">Downloads</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../registration/">Registration</a>
-                    </li>
-                </ul>
+                <p class="caption"><span class="caption-text">More information</span></p>
                 <ul>
                     <li class="toctree-l1"><a class="reference internal" href="../contact/">Contact</a>
                     </li>
@@ -95,11 +96,15 @@
     <li><a href="..">Docs</a> &raquo;</li>
     
       
+        
+          <li>Participate &raquo;</li>
+        
+      
     
-    <li>Tasks</li>
+    <li>Competition Rules</li>
     <li class="wy-breadcrumbs-aside">
       
-        <a href="https://github.com/icdar21-mapseg/icdar21-mapseg.github.io/edit/main/docs/tasks.md"
+        <a href="https://github.com/icdar21-mapseg/icdar21-mapseg.github.io/edit/main/docs/rules.md"
           class="icon icon-github"> Edit on GitHub</a>
       
     </li>
@@ -110,13 +115,20 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="tasks">Tasks</h1>
-<h2 id="task-1-detect-building-blocks">Task 1: Detect Building Blocks</h2>
-<p>TODO</p>
-<h2 id="task-2-segment-map-content-area">Task 2: Segment Map Content Area</h2>
-<p>TODO</p>
-<h2 id="task-3-locate-graticule-lines-intersections">Task 3: Locate Graticule Lines Intersections</h2>
-<p>TODO</p>
+                <h1 id="competition-rules">Competition Rules</h1>
+<p>Dear participants, in order to create valuable results and provide a fair competition experience for all participants, please respect those rules:</p>
+<ol>
+<li>You can participate to 1, 2 or 3 tasks: they will be awarded separately.</li>
+<li>You must register and process the test set in time for your method to be evaluated.</li>
+<li>You must submit your method short description in time for your method to be included in the result paper.</li>
+<li>Your method must not include any manual annotation process.</li>
+<li>You must train on the training set or publicly available data exclusively.</li>
+<li>You must clearly indicate in your method presentation the training and validation sets you used.</li>
+<li>You should calibrate all your parameters using the validation set. Not doing so will be pointed out in the report.</li>
+<li>You may use the complete dataset for training. In particular, you can use the training sets for tasks 2 and 3 as unsupervised training examples for task 1. If you do so, please report it in your method's description.</li>
+<li>You must report in your method's description any redundancy in data that you make use of.</li>
+<li>We will not ask you to send code or binaries, but we encourage you to release your method under an open-source license after the competition.</li>
+</ol>
               
             </div>
           </div>
@@ -124,10 +136,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../downloads/" class="btn btn-neutral float-right" title="Downloads">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../contact/" class="btn btn-neutral float-right" title="Contact">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href=".." class="btn btn-neutral" title="Overview"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../registration/" class="btn btn-neutral" title="Registration"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -155,10 +167,10 @@
           <a href="https://github.com/icdar21-mapseg/icdar21-mapseg.github.io/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href=".." style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../registration/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../downloads/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../contact/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
