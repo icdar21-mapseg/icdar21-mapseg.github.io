@@ -31,10 +31,10 @@ or by going to:
     Senior researcher in geographical information sciences at IGN/ENSG/Univ. Gustave Eiffel and associated researcher at EHESS.
 
 ## Organizations
-- **LRDE/EPITA**  
+- **[LRDE](https://www.lrde.epita.fr/)/[EPITA](https://www.epita.fr/)**  
   The EPITA is a renowned engineering school in computer science. Its R&D Lab. (LRDE) is specialized is efficient image processing, with a focus on document and medical image analysis.
-- **LASTIG/IGN**  
+- **[LASTIG](https://www.umr-lastig.fr/)/[IGN](https://ign.fr/)**  
   IGN is the French National Mapping Agency, owning more than 3 centuries of map archives and one century of aerial images over France and foreign countries. The research from LASTIG (one of IGN research labs) covers the complete lifecycle of spatial data from the capture to the visualization, including modelling, integration and analysis of spatial data with a special interest on spatio-temporal reference data.
-- **CRH/EHESS**  
+- **[CRH](http://crh.ehess.fr/)/[EHESS](https://www.ehess.fr/)**  
   EHESS is one of the most selective and prestigious graduate schools of social sciences in Paris, France.
-      Its researchers are affiliated to 35 Research Centers covering an extensive range of disciplines: history, sociology, anthropology, economics, geography, archaeology, psychology, and linguistics.
+  Its researchers are affiliated to 35 Research Centers covering an extensive range of disciplines: history, sociology, anthropology, economics, geography, archaeology, psychology, and linguistics.
