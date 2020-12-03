@@ -8,7 +8,14 @@ See source in timeline_data/source.xls
 <!-- *Competition timeline ([link to larger view](img/timeline.png))* -->
 <!-- </center> -->
 
+[Downloads](downloads.md){: .btn}
+[Subscribe to updates](contact.md#subscribe-to-updates){: .btn}
+[Registration](registration.md){: .btn}
 
+*Brought to you by*
+*the [LASTIG](https://www.umr-lastig.fr/) team of the [IGN](https://ign.fr/) (the French National Mapping Agency),*
+*the [R&D Lab](https://www.lrde.epita.fr/). of the [EPITA](https://www.epita.fr/) (French engineering school in computer science),*
+*and the [Center of Historical Studies](http://crh.ehess.fr/) of the [EHESS](https://www.ehess.fr/) (French graduate schools of social sciences).*
 
 ## Important dates
 
@@ -27,14 +34,16 @@ See source in timeline_data/source.xls
 |            | 2021-04-23 | Method descriptions due                                             | all   |
 |            | 2021-07-01 | Full data disclosure: round truth for test set, participant results | all   |
 
-## How to register?
-Please check the [Registration page](registration.md).
+<br>
 
-## How to download dataset and evaluation tools?
+<!-- ## How to register?
+Please check the [Registration page](registration.md). -->
+
+<!-- ## How to download dataset and evaluation tools?
 - The **train and validation sets** for all tasks are available under the [Downloads page](downloads.md).
 - **Evaluation tools** will be **open sourced soon** so participant can check their results themselves.
 - **Test sets** for all tasks will be released **at the start of the test phase.**
-- **All competition material** (full dataset, participant results, evaluation tools) will be released publicly **at the end of the competition.**
+- **All competition material** (full dataset, participant results, evaluation tools) will be released publicly **at the end of the competition.** -->
 
 ## About the competition
 This competition consists in solving several challenges which arise during the digitization of historical maps.
@@ -70,3 +79,9 @@ These tasks are necessary step during the digitization of historical maps, ie wh
 Automatic approaches with good generalization power will provide an enormous gain for the Geographical Information Systems (GIS) communities looking for solutions when digitizing old maps,
 and create a great potential for many historical studies.
 
+
+## Key strengths for participants
+- All datasets and evaluation tools are released with an **open licence** as soon as they are available.
+- Winners of each task will be invited to **co-author** the report paper.
+- We propose unsolved research problems with an **important potential impact**.
+  
