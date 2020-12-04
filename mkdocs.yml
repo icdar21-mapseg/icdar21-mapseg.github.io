@@ -20,6 +20,7 @@ nav:
   - More information:
     - contact.md
     # - 'Issue Tracker (external)': 'https://github.com/icdar21-mapseg/icdar21-mapseg.github.io/issues'
+    - 'Twitter': 'https://twitter.com/ICDAR21_MapSeg'
 markdown_extensions:
   - markdown_katex:
       no_inline_svg: True
