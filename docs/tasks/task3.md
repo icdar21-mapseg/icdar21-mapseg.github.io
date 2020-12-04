@@ -1,5 +1,5 @@
 # Task 3: Locate Graticule Lines Intersections
-This task consist in locating the intersection points of graticule lines.
+This task consists in locating the intersection points of graticule lines.
 
 Graticule lines are lines indicating the North/South/East/West major coordinates in the map.
 They are drawn every 1000 meters in each direction and overlap with the rest of the map content.

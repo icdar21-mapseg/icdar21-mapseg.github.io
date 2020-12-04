@@ -1,5 +1,5 @@
 # Task 2: Segment Map Content Area
-This task consist in segmenting the map content from the rest of the sheet.
+This task consists in segmenting the map content from the rest of the sheet.
 
 This is a rather classical document analysis task as it consist in focusing on the relevant area in order to perform a dedicated analysis. In our case, task 1 would be the following stage in the pipeline.
 

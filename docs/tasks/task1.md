@@ -1,5 +1,5 @@
 # Task 1: Detect Building Blocks
-This task consist in detecting a set of closed shapes (building blocks) in the map image.
+This task consists in detecting a set of closed shapes (building blocks) in the map image.
 
 Building blocks are coarser map objects which can regroup several elements.
 Detecting these objects is a critical step in the digitization of historical maps because it provides essential components of a city.
