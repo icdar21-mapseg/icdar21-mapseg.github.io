@@ -19,20 +19,20 @@ See source in timeline_data/source.xls
 
 ## Important dates
 
-| From       | To / On    | Title                                                               | Tasks |
-| ---------- | ---------- | ------------------------------------------------------------------- | ----- |
-|            | 2020-11-18 | Train and validation sets available                                 | all   |
-| 2020-11-18 | 2021-04-05 | Training phase                                                      | all   |
-|            | 2021-03-31 | Registration deadline for competition participants                  | all   |
-|            | 2021-04-05 | Test datasets available                                             | 1     |
-| 2021-04-05 | 2021-04-09 | Test phase                                                          | 1     |
-|            | 2021-04-09 | Submission deadline for results                                     | 1     |
-|            | 2021-04-12 | Test datasets available                                             | 2&3   |
-| 2021-04-12 | 2021-04-16 | Test phase                                                          | 2&3   |
-|            | 2021-04-16 | Submission deadline for results                                     | 2&3   |
-| 2021-04-12 | 2021-04-23 | Write short method description                                      | all   |
-|            | 2021-04-23 | Method descriptions due                                             | all   |
-|            | 2021-07-01 | Full data disclosure: round truth for test set, participant results | all   |
+| From       | To / On    | Title                                                                | Tasks |
+| ---------- | ---------- | -------------------------------------------------------------------- | ----- |
+|            | 2020-11-18 | Train and validation sets available                                  | all   |
+| 2020-11-18 | 2021-04-05 | Training phase                                                       | all   |
+|            | 2021-03-31 | Registration deadline for competition participants                   | all   |
+|            | 2021-04-05 | Test datasets available                                              | 1     |
+| 2021-04-05 | 2021-04-09 | Test phase                                                           | 1     |
+|            | 2021-04-09 | Submission deadline for results                                      | 1     |
+|            | 2021-04-12 | Test datasets available                                              | 2&3   |
+| 2021-04-12 | 2021-04-16 | Test phase                                                           | 2&3   |
+|            | 2021-04-16 | Submission deadline for results                                      | 2&3   |
+| 2021-04-12 | 2021-04-23 | Write short method description                                       | all   |
+|            | 2021-04-23 | Method descriptions due                                              | all   |
+|            | 2021-07-01 | Full data disclosure: Ground truth for test set, participant results | all   |
 
 <br>
 
