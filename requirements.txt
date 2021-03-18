@@ -1,2 +1,3 @@
 mkdocs
 markdown-katex
+fontawesome-markdown
