@@ -12,7 +12,7 @@ Given the image of a complete map sheet, you need to locate the boundary of the 
 
 We identified the following challenges:
 
-1. The map area usually is well separated from the other elements (title, legend, scale…) by several frames but sometimes map contents exceeds the frame for some large objects.
+1. The map area is usually well separated from the other elements (title, legend, scale…) by several frames but sometimes map contents exceeds the frame for some large objects.
 2. The frame itself is not straight and can be damaged.
 
 
@@ -71,16 +71,60 @@ Train, validation and test folder (if applicable) contain the same kind of files
 - test: 97 images
 
 ## Evaluation
-**Evaluation tools and illustrative notebooks provide participants with more details than the summary below.**
-*Please [subscribe to updates](../contact.md#subscribe-to-updates) to be notified when they are available.*
 
 To evaluate the quality of the segmentation, we will compute the [Hausdorff distance](https://en.wikipedia.org/wiki/Hausdorff_distance) between the expected shape do detect and the predicted one.
 **This implies that there is only one (connected, without hole) shape to detect.**
-This measure has the advantage over the "intersection over union", "Jaccard index" and other area measures that it keeps a good "contrast" between results in the case of large objects (because there is no normalization by the area).
+This measure has the advantage over the “intersection over union”, “Jaccard index” and other area measures that it keeps a good “contrast” between results in the case of large objects (because there is no normalization by the area).
 
-More specifically, we will use the "Hausdorff 95" variant which discards the 5 percentiles of higher values (assumed to be outliers) to produce a more stable measure.
+### Metric
+More specifically, we will use the “Hausdorff 95” variant which discards the 5 percentiles of higher values (assumed to be outliers) to produce a more stable measure.
 
 Finally, we will compute the average of the measures for all individual map images to produce a global indicator with a confidence measure.
 
 The resulting measure is a float value between 0 and a large value.
 A lower value is better.
+
+### Tool sample usage
+The [evaluation tool](../downloads.md#evaluation-tools) supports comparing either:
+
+* a predicted segmentation to a reference segmentation (as two binary images)
+* a reference directory to a reference segmentation
+  In this case, reference files are expected to end with ``-OUTPUT-GT.png``, and prediction files with ``-OUTPUT-PRED.png``.
+
+
+Comparing two files:
+
+```console
+$ icdar21-mapseg-eval T2 201-OUTPUT-GT.png 201-OUTPUT-PRED.png output_dir
+201-OUTPUT-PRED.png - Haussdorff95 = 0.00
+```
+
+Comparing two directories:
+
+```console
+$ icdar21-mapseg-eval T2 ./2-segmaparea/validation mypred/t2/validation output_dir
+.../PIL/Image.py:2847: DecompressionBombWarning: Image size (137239200 pixels) exceeds limit of 89478485 pixels, could be decompression bomb DOS attack.
+Processing |################################| 6/6
+                                     Error
+Reference         Prediction              
+201-OUTPUT-GT.png 201-OUTPUT-GT.png    0.0
+202-OUTPUT-GT.png 202-OUTPUT-GT.png    0.0
+203-OUTPUT-GT.png 203-OUTPUT-GT.png    0.0
+204-OUTPUT-GT.png 204-OUTPUT-GT.png    0.0
+205-OUTPUT-GT.png 205-OUTPUT-GT.png    0.0
+206-OUTPUT-GT.png 206-OUTPUT-GT.png    0.0
+==============================
+Global error for task 2: 0.000
+```
+
+<i class="fa fa-info-circle fa-2x"></i>
+Because the PNG files are large, you may get a warning from PIP that you can safely ignore:  
+`DecompressionBombWarning: Image size (137239200 pixels) exceeds limit of 89478485 pixels, could be decompression bomb DOS attack.`
+
+### Files generated in output folder
+When processing directories, the output directory will contain the following files:
+
+- `global_error.json`:  
+  Easy to parse file for global score with a summary of files analyzed.
+- `global_hd95.csv`:  
+  HD95 metrics for each image.

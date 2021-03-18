@@ -96,18 +96,73 @@ Train, validation and test folder (if applicable) contain the same kind of files
 
 
 ## Evaluation
-**Evaluation tools and illustrative notebooks provide participants with more details than the summary below.**
-*Please [subscribe to updates](../contact.md#subscribe-to-updates) to be notified when they are available.*
+For each map sheet, we extract the connected components from the predicted label mask.
+Based on this set of regions, we compute the [COCO PQ score](https://cocodataset.org/#panoptic-eval) associated to the instance segmentation returned by your system.
+Please note that as we have only 1 “thing” class and not “stuff” class, we provide indicators only for the building blocks class.
+These simplifications required a custom implementation which is fully compliant with the COCO PQ evaluation code.
 
-For each map sheet, we will extract the connected components from the predicted label mask.
-Based on this mask, we will compute the intersection over union (IoU) between each ground truth component and each predicted one, and retain only the matches with a value of at least $`0.5`$.
-When the IoU is strictly superior to $`0.5`$ we have 1-to-1 matches between ground truth components and predicted ones, and this enables the computation of prediction, recall and $`F_1`$ scores.
+### Metrics
+We report 3 indicators:
 
-We will compute the $`F_1`$ values for each possible IoU threshold in $`]0.5, 1]`$ and compute the area under the resulting curve.
-Such score will not only be free of any threshold, it will also be insensitive to shape area; thus weighting large and small shapes equally and provided an accurate measure of the number of objects properly detected.
+- **COCO SQ** (segmentation quality): mean IoU between matching shapes (matching shapes in reference and prediction have an IoU > 0.5).  
+  $`SQ \in [0,1]`$, higher is better.
+- **COCO RQ** (detection/recognition quality): detection F-score for shapes, a predicted shape is a true positive if it as an IoU > 0.5 with a reference shape.  
+  $`RQ \in [0,1]`$, higher is better.
+- **COCO PQ** (aggregated score): $`PQ = SQ * RQ`$.  
+  $`PQ \in [0,1]`$, higher is better.
 
-Finally, we will compute the average of the measures for all individual map images to produce a global indicator.
+The indicators are computed as: 
+```math 
+{\text{PQ}} = \underbrace{\frac{\sum_{(p, g) \in TP} \text{IoU}(p, g)}{\vphantom{\frac{1}{2}}|TP|}}_{\text{segmentation quality (SQ)}} \times \underbrace{\frac{|TP|}{|TP| + \frac{1}{2} |FP| + \frac{1}{2} |FN|}}_{\text{recognition quality (RQ)}}
+```
+where $`TP`$ is the set of matching pairs $`(p, g) \in (P \times G)`$ between predictions ($`P`$) and reference ($`G`$), $`FP`$ is the set of unmatched predicted shapes, and $`FN`$ is the set of unmatched reference shapes. 
+Shapes are considered as matching when:
+```math 
+\text{IoU}(p,g) = \frac{p \cap g}{p \cup g} \gt 0.5.
+```
 
-The resulting measure is a float value between 0 and $`0.5`$.
-A high value is better.
+### Using the evaluation tool
+The [evaluation tool](../downloads.md#evaluation-tools) supports comparing either:
 
+* a predicted segmentation to a reference segmentation (as two binary images in PNG or two label maps in TIFF16).
+* a reference directory to a reference segmentation.  
+  In this case, reference files are expected to end with ``-OUTPUT-GT.png``, and prediction files with ``-OUTPUT-PRED.png`` or ``-OUTPUT-*.tiff``.
+
+
+Comparing two files:
+
+```console
+$ icdar21-mapseg-eval T1 201-OUTPUT-GT.png 201-OUTPUT-PRED.png output_dir
+201-OUTPUT-PRED.png - COCO PQ 1.00 = 1.00 SQ * 1.00 RQ
+```
+
+Comparing two directories:
+
+```console
+$ icdar21-mapseg-eval T1 1-detbblocks/validation/ mypred/t1/validation/ output_dir
+Processing |################################| 1/1
+                                       COCO PQ  COCO SQ  COCO RQ
+Reference         Prediction                                  
+201-OUTPUT-GT.png 201-OUTPUT-PRED.png      1.0      1.0      1.0
+==============================
+Global score for task 1: 1.000
+============================
+```
+
+### Files generated in output folder
+The output directory will contain something like:
+
+```text
+201-OUTPUT-GT.plot.pdf 
+global_coco.csv        
+global_score.json      
+```
+
+Detail:
+
+- `global_coco.csv`:  
+  COCO metrics for each image.
+- `global_score.json`:  
+  Easy to parse file for global score with a summary of files analyzed.
+- `NNN-OUTPUT-PRED.plot.pdf`:  
+  Plot of the F-score against all IoU thresholds (COCO PQ is the area under the F-score curve + the value of the F-score at 0.5).

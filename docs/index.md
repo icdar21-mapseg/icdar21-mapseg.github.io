@@ -8,16 +8,20 @@ See source in timeline_data/source.xls
 <!-- *Competition timeline ([link to larger view](img/timeline.png))* -->
 <!-- </center> -->
 
-[Downloads](downloads.md){: .btn}
+<i class="fa fa-download fa-lg"></i>
+[Download dataset (train/val)](downloads.md#dataset-train-and-validation-sets){: .btn}
+[Download evaluation tools](downloads.md#evaluation-tools){: .btn .btn-danger}
+
+<i class="fa fa-rss fa-lg"></i>
 [Subscribe to updates](contact.md#subscribe-to-updates){: .btn}
-[Registration](registration.md){: .btn}
+[Register](registration.md){: .btn .btn-danger}
 
 *Brought to you by*
 *the [LASTIG](https://www.umr-lastig.fr/) team of the [IGN](https://ign.fr/) (the French National Mapping Agency),*
 *the [R&D Lab](https://www.lrde.epita.fr/). of the [EPITA](https://www.epita.fr/) (French engineering school in computer science),*
 *and the [Center of Historical Studies](http://crh.ehess.fr/) of the [EHESS](https://www.ehess.fr/) (French graduate schools of social sciences).*
 
-## Important dates
+## 📅 Important dates
 
 | From       | To / On    | Title                                                                | Tasks |
 | ---------- | ---------- | -------------------------------------------------------------------- | ----- |
@@ -44,8 +48,7 @@ Please check the [Registration page](registration.md). -->
 - **Evaluation tools** will be **open sourced soon** so participant can check their results themselves.
 - **Test sets** for all tasks will be released **at the start of the test phase.**
 - **All competition material** (full dataset, participant results, evaluation tools) will be released publicly **at the end of the competition.** -->
-
-## About the competition
+## 🏆 About the competition 🗺️
 This competition consists in solving several challenges which arise during the digitization of historical maps.
 We are particularly interested in a large map series consisting in many Paris atlases over half a century (1860's-1940's).
 For each year, a set of approximately 20 sheets forms a tiled view of the city.
@@ -80,8 +83,8 @@ Automatic approaches with good generalization power will provide an enormous gai
 and create a great potential for many historical studies.
 
 
-## Key strengths for participants
-- All datasets and evaluation tools are released with an **open licence** as soon as they are available.
+## 🚀 Key strengths for participants
+- All datasets and evaluation tools are released with an **open license** as soon as they are available.
 - Winners of each task will be invited to **co-author** the report paper.
 - We propose unsolved research problems with an **important potential impact**.
   

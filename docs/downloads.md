@@ -21,10 +21,16 @@ The test sets (inputs only) will be released at the beginning of the test phase 
 *Please [subscribe to updates](contact.md#subscribe-to-updates) to be notified when they are available.*
 
 ## Evaluation tools
-Evaluation tools are currently being polished and will be released shortly (open source Python scripts).
-Participants will be able to evaluate the performance of their systems by themselves.
+**Evaluation tools are available.**  You can download them using  
+<center>
+`pip install -U icdar21-mapseg-eval`
+</center>
 
-*Please [subscribe to updates](contact.md#subscribe-to-updates) to be notified when they are available.*
+They are [open-source Python programs](https://github.com/icdar21-mapseg/icdar21-mapseg-eval).
+
+Please check the [documentation for the evaluation tools](https://github.com/icdar21-mapseg/icdar21-mapseg-eval/blob/main/README.md) for more details about how to install them.
+
+Please check the documentation of each task for further details about how to use the evaluation tools for each task. 
 
 ## Competition results
 Competition results computed by participants will be made available publicly on this website, so that anyone can recompute the results and derive the final ranking.

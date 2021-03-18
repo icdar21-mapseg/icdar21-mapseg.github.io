@@ -108,23 +108,86 @@ x,y
 ```
 
 ## Evaluation
-**Evaluation tools and illustrative notebooks provide participants with more details than the summary below.**
-*Please [subscribe to updates](../contact.md#subscribe-to-updates) to be notified when they are available.*
 
-For each map sheet (ie for each CSV result), we will compare the predicted coordinates with the expected ones.
+For each map sheet (i.e. for each CSV result), we will compare the predicted coordinates with the expected ones.
+We will report an aggregated indicator (*PDS* for “Points Detection Score”) which considers detection and localization accuracy simultaneously.
+
+### Metric
 We will compute for each map sheet the number of correct predictions for each possible distance threshold:
 
 - a predicted point will be considered as a correct detection if it is the closest predicted point of a ground truth (expected) point and the distance between the expected point and the predicted one is smaller than a given threshold
 - we will consider all possible thresholds between 0 and 50 pixels, which roughly represents 20 meters on the maps and gives an upper limit over which the registration would be seriously disrupted.
 
 For each possible threshold we can compute the number of correct predictions, the number of incorrect ones (the complement of the prediction set) and the number of expected elements.
-This allows us to plot a $`F_{0.5}`$ score vs threshold curve for a range of thresholds.
+This allows us to plot a $`F_{\beta}`$ score vs threshold curve for a range of thresholds.
 The $`F_{\beta}`$ score with $`\beta=0.5`$ [weights recall lower than precision](https://en.wikipedia.org/wiki/F-score) because for this task it takes several good detections to correct a wrong one in the final registration.
 
-We will take the area under this "*$`F_{0.5}`$ score vs threshold*" curve as a performance indicator:
+We will take the area under this “*$`F_{0.5}`$ score vs threshold*” curve as a performance indicator:
 such indicator blends two indicators: point detection and spatial accuracy.
 
 Finally, we will compute the average of the measures for all individual map images to produce a global indicator with a confidence measure.
 
 The resulting measure is a float value between 0 and 1.
 A higher value is better.
+
+### Tool sample usage
+The [evaluation tool](../downloads.md#evaluation-tools) supports comparing either:
+
+* a predicted detection to a reference detection (as two CSV files)
+* a reference directory to a reference detection
+  In this case, reference files are expected to end with ``-OUTPUT-GT.csv``, and prediction files with ``-OUTPUT-PRED.csv``.
+
+Comparing two files:
+
+```console
+$ icdar21-mapseg-eval T3 201-OUTPUT-GT.csv 201-OUTPUT-PRED.csv output_dir
+201-OUTPUT-PRED.csv - Score: 1.000
+```
+
+Comparing two directories:
+
+```console
+$ icdar21-mapseg-eval T3 ./3-locglinesinter/validation mypred/t3/validation output_dir
+Processing |################################| 6/6
+                                       Score
+Reference         Predictions               
+201-OUTPUT-GT.csv 201-OUTPUT-PRED.csv    1.0
+202-OUTPUT-GT.csv 202-OUTPUT-PRED.csv    1.0
+203-OUTPUT-GT.csv 203-OUTPUT-PRED.csv    1.0
+204-OUTPUT-GT.csv 204-OUTPUT-PRED.csv    1.0
+205-OUTPUT-GT.csv 205-OUTPUT-PRED.csv    1.0
+206-OUTPUT-GT.csv 206-OUTPUT-PRED.csv    1.0
+==============================
+Global score for task 3: 1.000
+==============================
+```
+
+
+### Files generated in output folder
+The output directory will contain something like:
+```text
+201-OUTPUT-PRED.clf.pdf 
+201-OUTPUT-PRED.eval.csv
+201-OUTPUT-PRED.plot.csv
+201-OUTPUT-PRED.plot.pdf
+...
+global_rad:50_beta:0.50.csv
+global_score.json
+```
+
+Detail:
+
+- `global_rad:50_beta:0.50.csv`:  
+  global score for each pair of files (ground truth, prediction).
+- `global_score.json`:  
+  Easy to parse file for global score with a summary of files analyzed, and values for evaluation parameters.
+- `nnn-OUTPUT-PRED.eval.csv`:  
+  CSV file with all intermediate metrics (precision, recall, f_beta, tps, fns, fps, etc.) computed for each detected point.
+- `nnn-OUTPUT-PRED.plot.csv`:  
+  Source values used to generate the curve to plot.
+- `nnn-OUTPUT-PRED.plot.pdf`:  
+  Plot of the curve used to compute the global metric.
+- `nnn-OUTPUT-PRED.clf.pdf `:  
+  A visualization of predictions and their error classification against the ground truth.
+
+You can check the [Demo analysis notebook for task 3](https://github.com/icdar21-mapseg/icdar21-mapseg-eval/notebooks/task3_point_detect_eval_demo.ipynb) for further details about the evaluation tools for task 3.
