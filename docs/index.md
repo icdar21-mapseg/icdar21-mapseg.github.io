@@ -52,7 +52,7 @@ Please check the [Registration page](registration.md). -->
 This competition consists in solving several challenges which arise during the digitization of historical maps.
 We are particularly interested in a large map series consisting in many Paris atlases over half a century (1860's-1940's).
 For each year, a set of approximately 20 sheets forms a tiled view of the city.
-Such maps are highly detailed and very accurate even in modern standards.
+Such maps are highly detailed and very accurate even by modern standards.
 The **graphical nature of the content** is visible in the full map sheet illustrated below.
 
 <center>
