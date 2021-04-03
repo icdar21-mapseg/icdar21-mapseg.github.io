@@ -18,6 +18,16 @@ The test sets (inputs only) will be released at the beginning of the test phase 
 - task 1: 2021-04-05
 - tasks 2 and 3: 2021-04-12
 
+### Test inputs for Task 1
+- [Mirror 1](https://www.lrde.epita.fr/~jchazalo/SHARE/icdar21-mapseg_v1.0.0-test_t1_nogt-20210403a.zip)
+
+MD5 checksums:
+```txt
+334f5c676e3e2f052216623b3e40487d  icdar21-mapseg_v1.0.0-test_t1_nogt-20210403a.zip
+```
+
+
+**Participants are automatically notified when they are available.**  
 *Please [subscribe to updates](contact.md#subscribe-to-updates) to be notified when they are available.*
 
 ## Evaluation tools
