@@ -101,6 +101,8 @@ Based on this set of regions, we compute the [COCO PQ score](https://cocodataset
 Please note that as we have only 1 “thing” class and not “stuff” class, we provide indicators only for the building blocks class.
 These simplifications required a custom implementation which is fully compliant with the COCO PQ evaluation code.
 
+**We use 4-connectivity to compute labels from the binarized images of participants' predictions.**
+
 ### Metrics
 We report 3 indicators:
 
