@@ -8,7 +8,7 @@ Building blocks are surrounded by streets, rivers fortification wall or others, 
 Building blocks can sometimes be reduced to a single spacial building, symbolized by diagonal hatched areas.
 
 
-Given the image of a complete map sheet and a mask of the map area, you need to detect each building block, as illustrated below on a excerpt of the input.
+Given the image of a complete map sheet and a mask of the map area, you need to detect each building block, as illustrated below on an excerpt of the input.
 <center>
 ![Excerpt of the input for task 1](../img/task1-input-detail.jpg)
 *Excerpt of the input for task 1*
@@ -23,11 +23,11 @@ We identified the following challenges:
 
 1. Building blocks can have very variable sizes.
 2. They can be reduced to a single building (diagonal hatched area).
-3. Their contour can be damaged (ie non-closed).
+3. Their contour can be damaged (i.e. non-closed).
 4. Several other layers of information can be overlaid on building block outlines (text, railways, underground lines, graticule lines among others).
-5. There may be decompositions inside a building block, increasing the number of edges to filter.
-6. Building blocks may be large empty areas only surrounded by a contour. The lack of texture information and the variable sizes may be challenging to multiscale texture methods like convolutional neural networks.
-7. Producing closed contours requires to embed strong guarantees in the method.
+5. There may be nested shapes inside a building block, increasing the number of edges to filter.
+6. Building blocks may be large empty areas only surrounded by a contour. The lack of texture information and the variable sizes may be challenging to multi-scale texture methods like convolutional neural networks.
+7. Producing closed contours requires embedding strong guarantees in the method.
 
 
 ## Input
@@ -40,7 +40,7 @@ Those images can be large (8000x8000 pixels).
 *Sample input for task 1: non relevant pixels are replaced by black pixels.*
 </center>
 
-To help participants identify the non-relevant pixels, we also provide a mask image for which non-relevant pixels have value `0` and relevant pixels have value `255`, as illustrated below. Theses masks are the expected output for task 2 (cropped to the relevant part).
+To help participants identify the non-relevant pixels, we also provide a mask image for which non-relevant pixels have value `0` and relevant pixels have value `255`, as illustrated below. These masks are the expected output for task 2 (cropped to the relevant part).
 
 <center>
 ![Extra input mask for task 1](../img/task2-output-large.jpg)
