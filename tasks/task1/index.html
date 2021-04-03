@@ -170,7 +170,7 @@ Detecting these objects is a critical step in the digitization of historical map
 Each building block is symbolized by a closed which can enclose other objects and lines.
 Building blocks are surrounded by streets, rivers fortification wall or others, and are never directly connected.
 Building blocks can sometimes be reduced to a single spacial building, symbolized by diagonal hatched areas.</p>
-<p>Given the image of a complete map sheet and a mask of the map area, you need to detect each building block, as illustrated below on a excerpt of the input.
+<p>Given the image of a complete map sheet and a mask of the map area, you need to detect each building block, as illustrated below on an excerpt of the input.
 <center>
 <img alt="Excerpt of the input for task 1" src="../../img/task1-input-detail.jpg" />
 <em>Excerpt of the input for task 1</em>
@@ -183,11 +183,11 @@ Building blocks can sometimes be reduced to a single spacial building, symbolize
 <ol>
 <li>Building blocks can have very variable sizes.</li>
 <li>They can be reduced to a single building (diagonal hatched area).</li>
-<li>Their contour can be damaged (ie non-closed).</li>
+<li>Their contour can be damaged (i.e. non-closed).</li>
 <li>Several other layers of information can be overlaid on building block outlines (text, railways, underground lines, graticule lines among others).</li>
-<li>There may be decompositions inside a building block, increasing the number of edges to filter.</li>
-<li>Building blocks may be large empty areas only surrounded by a contour. The lack of texture information and the variable sizes may be challenging to multiscale texture methods like convolutional neural networks.</li>
-<li>Producing closed contours requires to embed strong guarantees in the method.</li>
+<li>There may be nested shapes inside a building block, increasing the number of edges to filter.</li>
+<li>Building blocks may be large empty areas only surrounded by a contour. The lack of texture information and the variable sizes may be challenging to multi-scale texture methods like convolutional neural networks.</li>
+<li>Producing closed contours requires embedding strong guarantees in the method.</li>
 </ol>
 <h2 id="input">Input</h2>
 <p>The inputs form a set of JPEG RGB images like the one illustrated below.
@@ -197,7 +197,7 @@ Those images can be large (8000x8000 pixels).</p>
 <img alt="Sample input for task 1" src="../../img/task1-input-large.jpg" />
 <em>Sample input for task 1: non relevant pixels are replaced by black pixels.</em>
 </center></p>
-<p>To help participants identify the non-relevant pixels, we also provide a mask image for which non-relevant pixels have value <code>0</code> and relevant pixels have value <code>255</code>, as illustrated below. Theses masks are the expected output for task 2 (cropped to the relevant part).</p>
+<p>To help participants identify the non-relevant pixels, we also provide a mask image for which non-relevant pixels have value <code>0</code> and relevant pixels have value <code>255</code>, as illustrated below. These masks are the expected output for task 2 (cropped to the relevant part).</p>
 <p><center>
 <img alt="Extra input mask for task 1" src="../../img/task2-output-large.jpg" />
 <em>Extra input mask for task 1 (exact same format as the output for task 2): indicates the masked content.</em>
@@ -254,6 +254,7 @@ if the input image is named <code>train/301-INPUT.jpg</code>, then the output fi
 Based on this set of regions, we compute the <a href="https://cocodataset.org/#panoptic-eval">COCO PQ score</a> associated to the instance segmentation returned by your system.
 Please note that as we have only 1 “thing” class and not “stuff” class, we provide indicators only for the building blocks class.
 These simplifications required a custom implementation which is fully compliant with the COCO PQ evaluation code.</p>
+<p><strong>We use 4-connectivity to compute labels from the binarized images of participants' predictions.</strong></p>
 <h3 id="metrics">Metrics</h3>
 <p>We report 3 indicators:</p>
 <ul>
