@@ -8,13 +8,13 @@ See source in timeline_data/source.xls
 <!-- *Competition timeline ([link to larger view](img/timeline.png))* -->
 <!-- </center> -->
 
-<i class="fa fa-download fa-lg"></i>
-[Download dataset (train/val)](downloads.md#dataset-train-and-validation-sets){: .btn}
-[Download evaluation tools](downloads.md#evaluation-tools){: .btn .btn-danger}
+<i class="fa fa-download fa-lg"></i> Downloads 
+[Test set (Task 1)](downloads.md#test-inputs-for-task-1){: .btn  .btn-danger}
+[Train/val set (All tasks)](downloads.md#dataset-train-and-validation-sets){: .btn}
+[Evaluation tools](downloads.md#evaluation-tools){: .btn}
 
-<i class="fa fa-rss fa-lg"></i>
+<i class="fa fa-rss fa-lg"></i> Connect 
 [Subscribe to updates](contact.md#subscribe-to-updates){: .btn}
-[Register](registration.md){: .btn .btn-danger}
 
 *Brought to you by*
 *the [LASTIG](https://www.umr-lastig.fr/) team of the [IGN](https://ign.fr/) (the French National Mapping Agency),*

@@ -18,8 +18,9 @@ The test sets (inputs only) will be released at the beginning of the test phase 
 - task 1: 2021-04-05
 - tasks 2 and 3: 2021-04-12
 
-### Test inputs for Task 1
+### 🏆 Test inputs for Task 1 🔥
 - [Mirror 1](https://www.lrde.epita.fr/~jchazalo/SHARE/icdar21-mapseg_v1.0.0-test_t1_nogt-20210403a.zip)
+- [Mirror 2](https://drive.google.com/file/d/1Cq3z-c002og5piHKjg9iyaGKRLnKYSWw/view?usp=sharing)
 
 MD5 checksums:
 ```txt
