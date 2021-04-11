@@ -13,10 +13,7 @@ c54c35d132701bc5e6ddd5c70fc854b3  icdar21-mapseg-v1.0.0-trainval-20201114a.zip
 ```
 
 ## Dataset (test sets)
-The test sets (inputs only) will be released at the beginning of the test phase for each task:
 
-- task 1: 2021-04-05
-- tasks 2 and 3: 2021-04-12
 
 ### 🏆 Test inputs for Task 1 🔥
 - [Mirror 1](https://www.lrde.epita.fr/~jchazalo/SHARE/icdar21-mapseg_v1.0.0-test_t1_nogt-20210403a.zip)
@@ -28,8 +25,17 @@ MD5 checksums:
 ```
 
 
-**Participants are automatically notified when they are available.**  
-*Please [subscribe to updates](contact.md#subscribe-to-updates) to be notified when they are available.*
+### 🏆 Test inputs for Task 2 and 3 🔥
+- [Mirror 1](https://www.lrde.epita.fr/~jchazalo/SHARE/icdar21-mapseg_v1.0.0-test_t23_nogt-20210411a.zip)
+- [Mirror 2](https://drive.google.com/file/d/16DifbYMlbkjIk8acc8zj5zx0rkZlu6Um/view?usp=sharing)
+- [Mirror 3](https://www.dropbox.com/t/1xifcEPMScDZTOIG)
+
+**Size: 1.23 GB**
+
+MD5 checksums:
+```txt
+1995d8f4cbb7cb888b82153b6067696d  icdar21-mapseg_v1.0.0-test_t23_nogt-20210411a.zip
+```
 
 ## Evaluation tools
 **Evaluation tools are available.**  You can download them using  

@@ -9,8 +9,8 @@ See source in timeline_data/source.xls
 <!-- </center> -->
 
 <i class="fa fa-download fa-lg"></i> Downloads 
-[Test set (Task 1)](downloads.md#test-inputs-for-task-1){: .btn  .btn-danger}
-[Train/val set (All tasks)](downloads.md#dataset-train-and-validation-sets){: .btn}
+[Test set (Tasks 2-3)](downloads.md#test-inputs-for-task-2-and-3){: .btn  .btn-danger}
+[Other sets](downloads.md){: .btn}
 [Evaluation tools](downloads.md#evaluation-tools){: .btn}
 
 <i class="fa fa-rss fa-lg"></i> Connect 
