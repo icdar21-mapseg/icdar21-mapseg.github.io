@@ -68,7 +68,7 @@ Train, validation and test folder (if applicable) contain the same kind of files
 
 - train: 26 images
 - validation: 6 images
-- test: 97 images
+- test: 95 images
 
 ## Evaluation
 
