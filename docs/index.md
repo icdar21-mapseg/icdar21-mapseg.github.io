@@ -78,7 +78,7 @@ We expect this competition to provide solutions for three levels of scientific p
 - [Task 2: Segmentation of map content within map sheets](tasks/task2.md)
 - [Task 3: Localization of graticule lines intersections](tasks/task3.md)
 
-These tasks are necessary step during the digitization of historical maps, ie when gradually turning a raster image into a set of vector geometries projected onto a particular geographical coordinate reference system.
+These tasks are necessary step during the digitization of historical maps, i.e. when gradually turning a raster image into a set of vector geometries projected onto a particular geographical coordinate reference system.
 Automatic approaches with good generalization power will provide an enormous gain for the Geographical Information Systems (GIS) communities looking for solutions when digitizing old maps,
 and create a great potential for many historical studies.
 
