@@ -1,55 +1,54 @@
 # Downloads
 
-## Dataset (train and validation sets)
-The train and validation sets for tasks 1, 2 and 3 is available as an archive.
+## Competition report
+[![arXiv](https://img.shields.io/badge/cs.CV-arXiv%3AFIXME-B31B1B.svg)](FIXME)
 
-You can currently download them here:
-
-- [Mirror 1](https://www.lrde.epita.fr/~jchazalo/SHARE/icdar21-mapseg-v1.0.0-trainval-20201114a.zip)
-
-MD5 checksums:
-```txt
-c54c35d132701bc5e6ddd5c70fc854b3  icdar21-mapseg-v1.0.0-trainval-20201114a.zip
-```
-
-## Dataset (test sets)
+The competition report summarizes competition challenges and tasks, evaluation protocol, method descriptions and evaluation results.
+We provide an author copy of the official report published in ICDAR's proceedings, archived on arXiv.
 
 
-### 🏆 Test inputs for Task 1 🔥
-- [Mirror 1](https://www.lrde.epita.fr/~jchazalo/SHARE/icdar21-mapseg_v1.0.0-test_t1_nogt-20210403a.zip)
-- [Mirror 2](https://drive.google.com/file/d/1Cq3z-c002og5piHKjg9iyaGKRLnKYSWw/view?usp=sharing)
+## Dataset 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4817662.svg)](https://doi.org/10.5281/zenodo.4817662)
 
-MD5 checksums:
-```txt
-334f5c676e3e2f052216623b3e40487d  icdar21-mapseg_v1.0.0-test_t1_nogt-20210403a.zip
-```
+For each task, we provide a folder containing inputs **and expected outputs (ground truth)**:
+
+- `1-detbblock` is for Task 1: “Detect Building Blocks”;
+- `2-segmaparea` is for Task 2: “Segment Map Area”;
+- `3-locglinesinter` is for Task 3: “Locate Graticule Line Intersections”.
+
+For each of those tasks, we provide a training set, a validation set and a test set.
+
+- `$TASK/train` contains sample inputs and expected outputs to be used to train your method.  
+  File names in this set start with `1NN`.
+- `$TASK/validation` contains sample inputs and expected outputs to be used to assess the performance of your method without touching the test set.  
+  It should be used to calibrate the hyper-parameters of your approach.  
+  File names in this set start with `2NN`.
+- `$TASK/test` contains sample inputs and expected outputs to be used to measure and report the final performance of your method.  
+  File names in this set start with `3NN`.
 
 
-### 🏆 Test inputs for Task 2 and 3 🔥
-- [Mirror 1](https://www.lrde.epita.fr/~jchazalo/SHARE/icdar21-mapseg_v1.0.0-test_t23_nogt-20210411a.zip)
-- [Mirror 2](https://drive.google.com/file/d/16DifbYMlbkjIk8acc8zj5zx0rkZlu6Um/view?usp=sharing)
-- [Mirror 3](https://www.dropbox.com/t/1xifcEPMScDZTOIG)
+## Participants' submissions, descriptions and evaluation reports
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4818228.svg)](https://doi.org/10.5281/zenodo.4818228)
 
-**Size: 1.23 GB**
+We released submitted results and methods descriptions from competition's participants,
+along with the evaluation results we computed.
 
-MD5 checksums:
-```txt
-1995d8f4cbb7cb888b82153b6067696d  icdar21-mapseg_v1.0.0-test_t23_nogt-20210411a.zip
-```
+Content is organized as follows.
+
+- Descriptions of their methods submitted by participants are available in the `descriptions/` folder.
+- Results submitted by participants are available in the `task-1/`, `task-2/` and `task-3/` folders.
+- Metrics computed by competition organizers are available in the `evaluation_t1/`, `evaluation_t2/` and `evaluation_t3/` folders.
+
 
 ## Evaluation tools
-**Evaluation tools are available.**  You can download them using  
-<center>
-`pip install -U icdar21-mapseg-eval`
-</center>
+[![DOI](https://zenodo.org/badge/347978686.svg)](https://zenodo.org/badge/latestdoi/347978686)
 
-They are [open-source Python programs](https://github.com/icdar21-mapseg/icdar21-mapseg-eval).
+Easy PIP installation:
+```shell
+pip install -U icdar21-mapseg-eval
+```
+
+Evaluation tools are open-source Python 3.7+ programs [available on GitHub](https://github.com/icdar21-mapseg/icdar21-mapseg-eval) and [archived on Zenodo](https://zenodo.org/badge/latestdoi/347978686).
 
 Please check the [documentation for the evaluation tools](https://github.com/icdar21-mapseg/icdar21-mapseg-eval/blob/main/README.md) for more details about how to install them.
 
-Please check the documentation of each task for further details about how to use the evaluation tools for each task. 
-
-## Competition results
-Competition results computed by participants will be made available publicly on this website, so that anyone can recompute the results and derive the final ranking.
-
-*Please [subscribe to updates](contact.md#subscribe-to-updates) to be notified when they are available.*
