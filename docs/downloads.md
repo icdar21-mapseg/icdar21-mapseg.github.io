@@ -6,6 +6,16 @@
 The competition report summarizes competition challenges and tasks, evaluation protocol, method descriptions and evaluation results.
 We provide an author copy of the official report published in ICDAR's proceedings, archived on arXiv.
 
+Citation:
+```bibtex
+@InProceedings{chazalon.21.icdar.mapseg,
+  author    = {Joseph Chazalon and Edwin Carlinet and Yizi Chen and Julien Perret and Bertrand Dum\'enieu and Cl\'ement Mallet and Thierry G\'eraud and Vincent Nguyen and Nam Nguyen and Josef Baloun and Ladislav Lenc and and Pavel Kr\'al},
+  title     = {ICDAR 2021 Competition on Historical Map Segmentation},
+  booktitle = {Proceedings of the 16th International Conference on Document Analysis and Recognition (ICDAR'21)},
+  year      = {2021},
+  address   = {Lausanne, Switzerland},
+}
+```
 
 ## Dataset 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4817662.svg)](https://doi.org/10.5281/zenodo.4817662)
