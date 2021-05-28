@@ -1,7 +1,7 @@
 # Downloads
 
 ## Competition report
-[![arXiv](https://img.shields.io/badge/cs.CV-arXiv%3AFIXME-B31B1B.svg)](FIXME)
+[![arXiv](https://img.shields.io/badge/cs.CV-arXiv%3A2105.13265-B31B1B.svg)](https://arxiv.org/abs/2105.13265)
 
 The competition report summarizes competition challenges and tasks, evaluation protocol, method descriptions and evaluation results.
 We provide an author copy of the official report published in ICDAR's proceedings, archived on arXiv.
