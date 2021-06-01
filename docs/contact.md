@@ -6,28 +6,29 @@ You can **contact the organizers** by sending an email to:
 
 You can also [create an issue on our tracker](https://github.com/icdar21-mapseg/icdar21-mapseg.github.io/issues).
 
+<!--
 ## Subscribe to Updates
 You can **subscribe to the announcement list** (*you can unsubscribe at any time*) by sending an email to:  
 <center>[icdar21-mapseg-announcements+subscribe@googlegroups.com](mailto:icdar21-mapseg-announcements+subscribe@googlegroups.com)</center>
 or by going to:
 <center>[https://groups.google.com/g/icdar21-mapseg-announcements](https://groups.google.com/g/icdar21-mapseg-announcements)</center>
-
+-->
 
 ## Organizers
-- **Edwin Carlinet**  
+- **[Edwin Carlinet](https://orcid.org/0000-0001-5737-5266)**  
     Associate professor of computer vision at the EPITA Computer Science school.
-- **Joseph Chazalon**  
+- **[Joseph Chazalon](https://orcid.org/0000-0002-3757-074X)**  
     Associate professor of computer vision at the EPITA Computer Science school.
-- **Yizi Chen**  
+- **[Yizi Chen](https://orcid.org/0000-0003-1637-0092)**  
     PhD candidate at IGN/ENSG/Univ. Gustave Eiffel and LRDE/EPITA.
-- **Bertrand Duménieu**  
+- **[Bertrand Duménieu](https://orcid.org/0000-0002-2517-2058)**  
     Research engineer in geographical information sciences and geospatial humanities at EHESS.
-- **Thierry Géraud**  
+- **[Thierry Géraud](https://orcid.org/0000-0002-0380-7948)**  
     Full professor of computer vision at the EPITA Computer Science school.
     LRDE Team leader.
-- **Clément Mallet**  
+- **[Clément Mallet](https://orcid.org/0000-0002-2675-165X)**  
     Senior researcher in geographical information sciences at IGN/ENSG/Univ. Gustave Eiffel.
-- **Julien Perret**  
+- **[Julien Perret](https://orcid.org/0000-0002-0685-0730)**  
     Senior researcher in geographical information sciences at IGN/ENSG/Univ. Gustave Eiffel and associated researcher at EHESS.
 
 ## Organizations
