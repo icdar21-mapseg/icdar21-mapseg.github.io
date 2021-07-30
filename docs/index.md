@@ -15,7 +15,9 @@ who were invited to co-author the [competition report](https://arxiv.org/abs/210
 [![DOI](img/badge-zenodo-4818228.svg)](https://doi.org/10.5281/zenodo.4818228)
    Participants' submissions, detailed descriptions and evaluation reports  
 [![DOI](img/badge-zenodo-4818401.svg)](https://doi.org/10.5281/zenodo.4818401)
-   Evaluation tools
+   Evaluation tools  
+…and [material for ICDAR presentation](icdar-material.md): video teaser, slides, etc.
+
 
 To cite the competition, please cite the competition report:
 ```bibtex
@@ -27,6 +29,9 @@ To cite the competition, please cite the competition report:
   address   = {Lausanne, Switzerland},
 }
 ```
+
+
+
 
 <!-- OLD CONTENT -->
 
