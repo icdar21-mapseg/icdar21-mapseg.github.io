@@ -6,7 +6,12 @@ The MapSeg challenge ran from November 2020 to April 2021,
 with [🏆 winners for each three tasks](score_board.md)
 who were invited to co-author the [competition report](https://arxiv.org/abs/2105.13265).
 **We would like to thank all participants for their great submissions.**
-
+<video width="640" height="360" controls>
+    <source src="../res/Comp-ST_04-teaser.mp4" type="video/mp4">
+    Sorry, your browser does not support the video tag.
+    <br/>
+    However, you can still download the video teaser by clicking <a href="res/Comp-ST_04-teaser.mp4">here</a>).
+</video>
 **All material is now available:**  
 [![arXiv](img/badge-report-arxiv.svg)](https://arxiv.org/abs/2105.13265)
    Competition report  
