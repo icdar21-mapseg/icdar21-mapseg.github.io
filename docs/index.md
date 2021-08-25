@@ -21,7 +21,7 @@ who were invited to co-author the [competition report](https://arxiv.org/abs/210
    Participants' submissions, detailed descriptions and evaluation reports  
 [![DOI](img/badge-zenodo-4818401.svg)](https://doi.org/10.5281/zenodo.4818401)
    Evaluation tools  
-…and [material for ICDAR presentation](icdar-material.md): video teaser, slides, etc.
+…and [material for ICDAR presentation](icdar-material.md): [video teaser](res/Comp-ST_04-teaser.mp4), [slides](res/teaser_slides_v20210729-1106.pdf), [full presentation](res/presentation_slides_v20210729-1106.pdf) and [poster](res/poster_v3_A1_compressed.pdf).
 
 
 To cite the competition, please cite the competition report:
